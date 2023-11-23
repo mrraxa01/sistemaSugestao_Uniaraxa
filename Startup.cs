@@ -5,9 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using sistemasugestao.Context;
+using sistemasugestao.Models;
 
 namespace sistemasugestao
 {
@@ -24,6 +28,18 @@ namespace sistemasugestao
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<MyContext>(options =>
+options.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
+
+            services.AddIdentity<Login, IdentityRole>()
+            .AddDefaultTokenProviders()
+            .AddEntityFrameworkStores<MyContext>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Usuario/Acessar";
+                options.AccessDeniedPath = "/Usuario/AcessoNegado";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +68,7 @@ namespace sistemasugestao
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            GerarDadosDB.IncluiDadosDB(app);
         }
     }
 }

@@ -15,5 +15,9 @@ namespace sistemasugestao.Models
         public string Descricao { get; set; }
         [Required(ErrorMessage = "Digite o custo estimado", AllowEmptyStrings = false)]
         public double CustoEstimado { get; set; }
+        public int CampanhaID { get; set; }
+        public Campanha Campanha { get; set; }
+        public int AvaliadorID { get; set; }
+        public Avaliador Avaliador { get; set; }
     }
 }

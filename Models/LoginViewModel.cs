@@ -12,7 +12,7 @@ namespace sistemasugestao.Models
 
         [Required(ErrorMessage = "A Senha é obrigatória!", AllowEmptyStrings = false)]
         [DataType(DataType.Password)]
-        public string Senha { get; set; }
+        public string Password { get; set; }
 
         [Display(Name = "Manter logado!")]
         public bool flManterLogado { get; set; }

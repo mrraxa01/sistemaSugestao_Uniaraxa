@@ -1,0 +1,28 @@
+body{
+    
+    background-color: rgb(209, 206, 206);
+}
+
+header h1{
+    margin: 100px 0 50px 0;
+    color: #FFF;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.login-form-container{
+    color: #FFF;
+    font-weight: bolder;
+    background-color: rgb(55, 54, 54);
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.login-footer-container{
+    margin-top: 50px;
+    color: #FFF!important;
+    
+
+}

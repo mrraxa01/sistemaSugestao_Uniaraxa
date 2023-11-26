@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Sistema de Gestão</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/page_login.css" />
+</head>
+<body>
+    <header>
+            <h1 >Sistema de Sugestão</h1>
+    </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @{await Html.RenderPartialAsync("_statusMessages");}
+                @RenderBody()
+            </main>
+        </div>
+        <footer class="border-top footer text-muted login-footer-container">
+            <div class="container">
+                &copy; 2023 - Sistema de Sugestão - Márcio Rodrigues - Uniaraxá
+            </div>
+        </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts",required: false)
+</body>
+</html>

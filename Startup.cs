@@ -37,8 +37,8 @@ options.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
 
             services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = "/Usuario/Acessar";
-                options.AccessDeniedPath = "/Usuario/AcessoNegado";
+                options.LoginPath = "/Login";
+                options.AccessDeniedPath = "/Login/AcessoNegado";
             });
         }
 
@@ -66,9 +66,11 @@ options.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Login}/{action=Index}/{id?}");
             });
             GerarDadosDB.IncluiDadosDB(app);
         }
+
+
     }
 }

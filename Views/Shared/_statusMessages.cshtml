@@ -1,0 +1,15 @@
+@{
+    var type = (string) TempData["type"];
+    var title = (string) TempData["title"];
+    var body = (string) TempData["body"];
+}
+
+@if (!string.IsNullOrEmpty(type))
+{
+    <div id="alerta" class="alert alert-@type alert-dismissible" role="alert">
+        <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">
+            &times;</span></button>
+        <strong>@title</strong>
+        @body
+    </div>
+}

@@ -11,9 +11,12 @@
     min-height: 600px;
 }
 
-.content-top{
-
+.container-content hr{
+    border-top: 2px solid #000;
+    border-radius: 5px;
+    margin: 80px 0 80px 0;
 }
+
 .content-top a{
     color: #000;
     text-decoration: underline;
@@ -21,4 +24,25 @@
 .content-top img{
     width: 350px;
     height: 250px;
+}
+
+.content-left{
+   padding: 5px 0 5px 5px;
+}
+
+.content-right{
+    padding: 5px 0 5px 5px;
+}
+
+.content-left h3{
+    font-style: italic;
+}
+.content-left a{
+    text-decoration: underline;
+}
+.content-right h3{
+    font-style: italic;
+}
+.content-right a{
+    text-decoration: underline;
 }

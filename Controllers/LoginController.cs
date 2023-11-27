@@ -12,12 +12,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using System.Diagnostics;
 
 
 
 namespace sistemasugestao.Controllers
 {
-    public class LoginController: Controller
+    public class LoginController : Controller
     {
 
         private readonly UserManager<Login> _userManager;
@@ -58,7 +59,7 @@ namespace sistemasugestao.Controllers
                     return RedirectToLocal(returnURL);
                 }
             }
-           
+
             TempData["type"] = "danger";
             TempData["title"] = "Erro";
             TempData["body"] = "Falha na tentativa de login, tente novamente!";
@@ -127,6 +128,11 @@ namespace sistemasugestao.Controllers
             await _signInManager.SignOutAsync();
             _logger.LogInformation("Usuário realizou Logout!");
             return RedirectToAction("Login", "Usuario");
+        }
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
     }

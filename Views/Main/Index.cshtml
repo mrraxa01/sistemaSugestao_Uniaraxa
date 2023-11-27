@@ -1,0 +1,33 @@
+@{
+    Layout = "~/Views/Shared/_MeuLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+</head>
+
+<body>
+    <div class="container container-content">
+        <div class="row content-top">
+            <div class="col-sm-6">
+                <h1>Sistema de Sugestões </h1>
+                <p>Participe de uma de nossas campanhas de sugestões e nos ajude a melhorar!</p>
+                <p>Você pode participar de uma campanha ativa ou sugerir uma nova campanha!</p>
+                <a asp-controller="Login" asp-action="RegistrarNovoUsuario">
+                    <h3>Faça seu cadastro!!</h3>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                    <img src="~/lib/imgs/sugestao.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

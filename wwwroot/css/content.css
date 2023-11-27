@@ -1,0 +1,24 @@
+#header-content {
+    background-color: grey;
+}
+
+#img-user {
+    width: 25px;
+    height: 25px;
+}
+
+.container-content {
+    min-height: 600px;
+}
+
+.content-top{
+
+}
+.content-top a{
+    color: #000;
+    text-decoration: underline;
+}
+.content-top img{
+    width: 350px;
+    height: 250px;
+}

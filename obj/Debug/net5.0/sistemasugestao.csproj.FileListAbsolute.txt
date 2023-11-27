@@ -73,3 +73,8 @@ C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\siste
 C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\sistemasugestao.genruntimeconfig.cache
 C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\Razor\Views\Shared\_statusMessages.cshtml.g.cs
 C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\Razor\Views\Login\RegistrarNovoUsuario.cshtml.g.cs
+C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\Razor\Views\Main\Index.cshtml.g.cs
+C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\Razor\Views\Shared\_MeuLayout.cshtml.g.cs
+C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\Razor\Views\Main\Avaliador.cshtml.g.cs
+C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\Razor\Views\Main\Campanha.cshtml.g.cs
+C:\workspace\uniaraxa\desenvolvimentoweb1\sistemasugestao\obj\Debug\net5.0\Razor\Views\Main\Sugestao.cshtml.g.cs
